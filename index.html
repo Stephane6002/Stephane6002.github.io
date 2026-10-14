@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Stéphane, étudiant en BTS SIO SISR.">
+  <title>Stéphane | Portfolio SISR</title>
+  <style>
+    :root {
+      --noir: #000000;
+      --nuit: #172554;
+      --bleu: #2563EB;
+      --ciel: #38BDF8;
+      --blanc: #F8FAFC;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--noir);
+      color: var(--blanc);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.94);
+      border-bottom: 1px solid #172554;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo { font-weight: bold; font-size: 1.2rem; }
+    .logo span { color: var(--ciel); }
+
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a:hover { color: var(--ciel); }
+
+    main { max-width: 1100px; margin: auto; padding: 0 24px; }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px 0;
+    }
+
+    .tag {
+      color: var(--ciel);
+      background: var(--nuit);
+      border: 1px solid var(--bleu);
+      border-radius: 30px;
+      padding: 5px 14px;
+      font-size: 0.9rem;
+    }
+
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.1; margin: 25px 0; }
+    h1 span { color: var(--ciel); }
+    .intro { max-width: 650px; color: #CBD5E1; font-size: 1.1rem; }
+
+    .button {
+      display: inline-block;
+      margin: 20px 12px 0 0;
+      padding: 11px 20px;
+      background: var(--bleu);
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--ciel);
+    }
+
+    section { padding: 65px 0; scroll-margin-top: 80px; }
+    h2 { font-size: 2rem; margin-bottom: 10px; }
+    h2 span { color: var(--ciel); }
+    .subtitle { color: #94A3B8; margin-bottom: 30px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #0B1224;
+      border: 1px solid #24365D;
+      border-radius: 14px;
+      padding: 23px;
+    }
+
+    .card h3 { color: var(--ciel); margin-top: 0; }
+    .card p { color: #CBD5E1; }
+    .pill {
+      display: inline-block;
+      color: #BAE6FD;
+      background: var(--nuit);
+      border-radius: 5px;
+      padding: 3px 9px;
+      margin: 4px;
+      font-size: 0.85rem;
+    }
+
+    .contact { background: #0B1224; border-radius: 16px; padding: 30px; }
+    footer { text-align: center; padding: 30px; color: #94A3B8; border-top: 1px solid #172554; }
+
+    @media (max-width: 600px) {
+      header { padding: 15px 5%; }
+      nav { gap: 12px; font-size: 0.9rem; }
+      main { padding: 0 18px; }
+      .hero { min-height: 65vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#accueil">ST<span>.</span> SISR</a>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <span class="tag">Étudiant · BTS SIO SISR</span>
+      <h1>Bonjour, je suis<br><span>Stéphane.</span></h1>
+      <p class="intro">
+        Passionné par l'informatique, les systèmes et les réseaux,
+        je développe progressivement mes compétences en administration
+        système, Linux et infrastructure informatique.
+      </p>
+      <div>
+        <a class="button" href="#projets">Découvrir mes projets ↘</a>
+        <a class="button secondary" href="#contact">Me contacter</a>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos <span>de moi</span></h2>
+      <p class="subtitle">Mon parcours et mes objectifs</p>
+      <div class="card">
+        Je suis étudiant en première année de BTS Services Informatiques
+        aux Organisations, option Solutions d'Infrastructure, Systèmes
+        et Réseaux (SISR). Je construis ce portfolio pour documenter
+        mon apprentissage, présenter mes réalisations et progresser
+        dans l'administration des systèmes et des réseaux.
+      </div>
+    </section>
+
+    <section id="competences">
+      <h2>Mes <span>compétences</span></h2>
+      <p class="subtitle">Les technologies que j'étudie et pratique.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>🐧 Linux</h3>
+          <p>Premiers pas dans le terminal et l'administration système.</p>
+          <span class="pill">Ubuntu</span>
+          <span class="pill">Terminal</span>
+          <span class="pill">Permissions</span>
+        </article>
+        <article class="card">
+          <h3>🖥️ Systèmes</h3>
+          <p>Découverte des utilisateurs, des fichiers et des environnements virtuels.</p>
+          <span class="pill">Utilisateurs</span>
+          <span class="pill">VirtualBox</span>
+        </article>
+        <article class="card">
+          <h3>🌐 Réseaux</h3>
+          <p>Apprentissage des fondamentaux des réseaux informatiques.</p>
+          <span class="pill">TCP/IP</span>
+          <span class="pill">Adressage IP</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Mes <span>projets</span></h2>
+      <p class="subtitle">Mes travaux pratiques et réalisations.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>01 · Environnement Ubuntu</h3>
+          <p>Installation et découverte d'une machine virtuelle Ubuntu avec VirtualBox.</p>
+          <span class="pill">Linux</span>
+          <span class="pill">Virtualisation</span>
+        </article>
+        <article class="card">
+          <h3>02 · Utilisateurs Linux</h3>
+          <p>Exercices sur la création de comptes, les groupes et les permissions.</p>
+          <span class="pill">Terminal</span>
+          <span class="pill">Administration</span>
+        </article>
+        <article class="card">
+          <h3>03 · Prochains projets</h3>
+          <p>Cette rubrique sera enrichie avec mes futurs TP en systèmes et réseaux.</p>
+          <span class="pill">En apprentissage</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Me <span>contacter</span></h2>
+      <div class="contact">
+        <p>Vous souhaitez échanger avec moi au sujet de l'informatique ou de mon parcours ?</p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="color:#38BDF8">Mon profil LinkedIn</a></p>
+        <p>Email : <a href="mailto:ton-email@example.com" style="color:#38BDF8">ton-email@example.com</a></p>
+        <p><small>Pense à remplacer ces coordonnées par les tiennes.</small></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Stéphane · Portfolio BTS SIO SISR
+  </footer>
+</body>
+</html>
